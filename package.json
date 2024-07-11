@@ -19,6 +19,8 @@
   "dependencies": {
     "@glidejs/glide": "^3.6.2",
     "@gsap/react": "^2.1.1",
-    "gsap": "^3.12.5"
+    "aos": "^2.3.4",
+    "gsap": "^3.12.5",
+    "lightbox2": "^2.11.4"
   }
 }
