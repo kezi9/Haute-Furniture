@@ -2,79 +2,151 @@ $primary-color: #333;
 $secondary-color: white;
 
 body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
+    font-family: Arial, sans-serif;
 }
 
 header {
-  background-color: $primary-color;
-  color: $secondary-color;
-  padding: 1rem 0;
-  text-align: center;
-
-  nav ul {
-    list-style: none;
-    padding: 0;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background-color: #333;
+    color: #fff;
 
-    li {
-      margin: 0 1rem;
-
-      a {
-        color: $secondary-color;
-        text-decoration: none;
-      }
+    .logo {
+        font-size: 1.5rem;
     }
-  }
+
+    nav ul {
+        display: flex;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+
+        li {
+            margin-right: 1rem;
+
+            a {
+                color: #fff;
+                text-decoration: none;
+
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+
+    .icons {
+        button {
+            background: none;
+            border: none;
+            color: #fff;
+            margin-left: 1rem;
+            cursor: pointer;
+        }
+
+        .burger-menu {
+            display: none;
+        }
+    }
 }
 
-section {
-  padding: 2rem;
-  text-align: center;
-}
+main {
+    .hero-slider {
+        .glide__slide {
+            height: 300px;
+            background-color: #ccc;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+        }
+    }
 
-.product-gallery {
-  display: flex;
-  justify-content: center;
-  gap: 1rem;
+    .featured-products {
+        padding: 2rem;
+        text-align: center;
 
-  img {
-    max-width: 100px;
-  }
-}
+        h2 {
+            margin-bottom: 1rem;
+        }
 
-form {
-  max-width: 400px;
-  margin: 0 auto;
-  text-align: left;
+        .products {
+            display: flex;
+            justify-content: center;
 
-  label {
-    display: block;
-    margin-top: 1rem;
-  }
+            a {
+                margin: 0 1rem;
+            }
+        }
+    }
 
-  input, textarea, button {
-    width: 100%;
-    padding: 0.5rem;
-    margin-top: 0.5rem;
-  }
-
-  button {
-    background-color: $primary-color;
-    color: $secondary-color;
-    border: none;
-    cursor: pointer;
-  }
+    .maps {
+        height: 300px;
+        background-color: #eee;
+    }
 }
 
 footer {
-  background-color: $primary-color;
-  color: $secondary-color;
-  text-align: center;
-  padding: 1rem 0;
-  position: fixed;
-  width: 100%;
-  bottom: 0;
+    padding: 2rem;
+    background-color: #333;
+    color: #fff;
+
+    nav ul {
+        display: flex;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+
+        li {
+            margin-right: 1rem;
+
+            a {
+                color: #fff;
+                text-decoration: none;
+
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+
+    .social-media,
+    .location-hours,
+    .subscribe {
+        margin-top: 1rem;
+    }
+}
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+
+        .icons {
+            display: none;
+
+            .burger-menu {
+                display: block;
+            }
+        }
+    }
+
+    nav ul {
+        flex-direction: column;
+
+        li {
+            margin-bottom: 0.5rem;
+        }
+    }
+
+    main .featured-products .products {
+        flex-direction: column;
+
+        a {
+            margin-bottom: 1rem;
+        }
+    }
 }

@@ -1,19 +1,25 @@
-// document.addEventListener("DOMContentLoaded", (event) => {
-//     // Glide.JS
-//     new Glide('.glide').mount();
-
-//     // AOS
-//     AOS.init();
-// });
-
 document.addEventListener('DOMContentLoaded', function() {
-    // Initialize Glide.js for the carousel
+    // Initialize Glide.js
     new Glide('.glide').mount();
-  
-    // Initialize AOS for animations when you scroll
+
+    // Initialize AOS
     AOS.init();
-  
-    // Initialize Parsley.js to check the form when you try to submit
-    $('#contact-form').parsley();
-  });
-  
+
+    // Initialize Lightbox
+    lightbox.option({
+        'resizeDuration': 200,
+        'wrapAround': true
+    });
+
+    // Initialize Algolia Places
+    var placesAutocomplete = places({
+        appId: 'YOUR_APP_ID',
+        apiKey: 'YOUR_API_KEY',
+        container: document.querySelector('#address-input')
+    });
+
+    // Toggle burger menu
+    document.querySelector('.burger-menu').addEventListener('click', function() {
+        document.querySelector('nav ul').classList.toggle('active');
+    });
+});

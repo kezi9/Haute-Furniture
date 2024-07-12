@@ -1,72 +1,122 @@
 body {
   font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
 }
 
 header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
   background-color: #333;
-  color: white;
-  padding: 1rem 0;
-  text-align: center;
+  color: #fff;
+}
+header .logo {
+  font-size: 1.5rem;
 }
 header nav ul {
-  list-style: none;
-  padding: 0;
   display: flex;
-  justify-content: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 header nav ul li {
-  margin: 0 1rem;
+  margin-right: 1rem;
 }
 header nav ul li a {
-  color: white;
+  color: #fff;
   text-decoration: none;
 }
+header nav ul li a:hover {
+  text-decoration: underline;
+}
+header .icons button {
+  background: none;
+  border: none;
+  color: #fff;
+  margin-left: 1rem;
+  cursor: pointer;
+}
+header .icons .burger-menu {
+  display: none;
+}
 
-section {
+main .hero-slider .glide__slide {
+  height: 300px;
+  background-color: #ccc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+}
+main .featured-products {
   padding: 2rem;
   text-align: center;
 }
-
-.product-gallery {
+main .featured-products h2 {
+  margin-bottom: 1rem;
+}
+main .featured-products .products {
   display: flex;
   justify-content: center;
-  gap: 1rem;
 }
-.product-gallery img {
-  max-width: 100px;
+main .featured-products .products a {
+  margin: 0 1rem;
 }
-
-form {
-  max-width: 400px;
-  margin: 0 auto;
-  text-align: left;
-}
-form label {
-  display: block;
-  margin-top: 1rem;
-}
-form input, form textarea, form button {
-  width: 100%;
-  padding: 0.5rem;
-  margin-top: 0.5rem;
-}
-form button {
-  background-color: #333;
-  color: white;
-  border: none;
-  cursor: pointer;
+main .maps {
+  height: 300px;
+  background-color: #eee;
 }
 
 footer {
+  padding: 2rem;
   background-color: #333;
-  color: white;
-  text-align: center;
-  padding: 1rem 0;
-  position: fixed;
-  width: 100%;
-  bottom: 0;
+  color: #fff;
+}
+footer nav ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+footer nav ul li {
+  margin-right: 1rem;
+}
+footer nav ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+footer nav ul li a:hover {
+  text-decoration: underline;
+}
+footer .social-media,
+footer .location-hours,
+footer .subscribe {
+  margin-top: 1rem;
+}
+
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  header .icons {
+    display: none;
+  }
+  header .icons .burger-menu {
+    display: block;
+  }
+  nav ul {
+    flex-direction: column;
+  }
+  nav ul li {
+    margin-bottom: 0.5rem;
+  }
+  main .featured-products .products {
+    flex-direction: column;
+  }
+  main .featured-products .products a {
+    margin-bottom: 1rem;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
