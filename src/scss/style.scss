@@ -1,80 +1,227 @@
 $primary-color: #333;
-$secondary-color: white;
+$secondary-color: #f5f5f5;
+$head-font: "Playwrite CU", cursive;
+$body-font: "Josefin Sans", sans-serif;
 
 body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
+  font-family: $body-font;
 }
 
 header {
-  background-color: $primary-color;
+  background: $primary-color;
   color: $secondary-color;
-  padding: 1rem 0;
-  text-align: center;
+  padding: 10px 20px;
 
-  nav ul {
-    list-style: none;
-    padding: 0;
+  nav {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
+    align-items: center;
 
-    li {
-      margin: 0 1rem;
+    .logo {
+      font-family: $head-font;
+      font-size: 1.5em;
+    }
 
-      a {
-        color: $secondary-color;
-        text-decoration: none;
+    .nav-links {
+      display: flex;
+      list-style: none;
+
+      li {
+        margin: 0 15px;
+
+        a {
+          color: $secondary-color;
+          text-decoration: none;
+        }
+      }
+    }
+
+    .icons {
+      display: flex;
+      align-items: center;
+
+      .icon-profile,
+      .icon-search,
+      .icon-location,
+      .icon-cart,
+      .icon-burger {
+        margin-left: 15px;
+        cursor: pointer;
+      }
+
+      .icon-burger {
+        display: none;
       }
     }
   }
 }
 
-section {
-  padding: 2rem;
-  text-align: center;
-}
+main {
+  .hero {
+    .glide {
+      width: 100%;
 
-.product-gallery {
-  display: flex;
-  justify-content: center;
-  gap: 1rem;
-
-  img {
-    max-width: 100px;
-  }
-}
-
-form {
-  max-width: 400px;
-  margin: 0 auto;
-  text-align: left;
-
-  label {
-    display: block;
-    margin-top: 1rem;
+      .glide__slide img {
+        width: 100%;
+        height: auto;
+      }
+    }
   }
 
-  input, textarea, button {
-    width: 100%;
-    padding: 0.5rem;
-    margin-top: 0.5rem;
+  .featured-products {
+    padding: 20px;
+
+    h2 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .product {
+      display: inline-block;
+      width: 30%;
+      margin: 1.5%;
+
+      img {
+        width: 100%;
+        height: auto;
+      }
+
+      p {
+        text-align: center;
+        margin-top: 10px;
+      }
+    }
   }
 
-  button {
-    background-color: $primary-color;
-    color: $secondary-color;
-    border: none;
-    cursor: pointer;
+  .maps {
+    padding: 20px;
+
+    h2 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    #address-input {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 20px;
+      font-size: 1em;
+    }
+
+    #map {
+      width: 100%;
+      height: 400px;
+      background: #eee;
+    }
   }
 }
 
 footer {
-  background-color: $primary-color;
+  background: $primary-color;
   color: $secondary-color;
-  text-align: center;
-  padding: 1rem 0;
-  position: fixed;
-  width: 100%;
-  bottom: 0;
+  padding: 20px;
+
+  .topFooter {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-content: space-around;
+
+    .footer-nav {
+      text-align: center;
+      align-content: center;
+      
+      ul {
+        list-style: none;
+        display: flex;
+        justify-content: center;
+
+        li {
+          margin: 0 15px;
+
+          a {
+            color: $secondary-color;
+            text-decoration: none;
+          }
+        }
+      }
+    }
+  }
+
+  .social-media {
+    text-align: center;
+    margin: 20px 0;
+
+    a {
+      margin: 0 10px;
+      color: $secondary-color;
+      text-decoration: none;
+
+      .icon-facebook,
+      .icon-x,
+      .icon-instagram {
+        font-size: 1.5em;
+      }
+    }
+  }
+
+  .location-hours {
+    text-align: center;
+    margin: 10px 0;
+  }
+
+  .subscription {
+    margin-top: 1.5em;
+    text-align: center;
+
+    input {
+      padding: 10px;
+      font-size: 1em;
+      width: 70%;
+      margin-right: 10px;
+    }
+
+    button {
+      padding: 10px;
+      font-size: 1em;
+    }
+  }
+
+  .copyright {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 768px) {
+  header nav {
+    flex-direction: row;
+    justify-content: space-between;
+    align-content: space-between;
+
+    .nav-links {
+      flex-direction: column;
+      display: none;
+
+      li {
+        margin: 10px 0;
+      }
+    }
+
+    .icons {
+
+      .icon-profile,
+      .icon-search,
+      .icon-location,
+      .icon-cart {
+        display: none;
+      }
+
+      .icon-burger {
+        display: block;
+      }
+
+    }
+  }
 }
