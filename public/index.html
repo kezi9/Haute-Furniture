@@ -1,35 +1,178 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Haute Interiors - Furniture Store</title>
 
   <!-- CSS -->
   <link rel="stylesheet" href="assets/css/style.css">
+  <!-- Glide CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@glidejs/glide/dist/css/glide.core.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@glidejs/glide/dist/css/glide.theme.min.css">
+  <!-- Lightbox -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css">
+  <!-- Leaflets -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+
+  <!-- FONTS -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playwrite+CU:wght@100..400&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Playwrite+CU:wght@100..400&display=swap"
+    rel="stylesheet">
+
+  <title>Haute Furniture</title>
 </head>
+
 <body>
   <header>
-    <h1>Haute Interiors</h1>
     <nav>
-      <ul>
-        <li><a href="#home">Home</a></li>
-        <li><a href="#products">Products</a></li>
-        <li><a href="#contact">Contact</a></li>
-        <li><a href="#about">About</a></li>
+      <div class="logo">Haute Furniture</div>
+      <ul class="nav-links">
+        <li><a href="#new">New</a></li>
+        <li><a href="#furniture">Furniture</a></li>
+        <li><a href="#decor">Decor</a></li>
+        <li><a href="#sale">Sale</a></li>
+        <li><a href="#explore">Explore Room</a></li>
       </ul>
+      <div class="icons">
+        <i class="icon-search"><svg class="w-[35px] h-[35px] text-gray-800 dark:text-white" aria-hidden="true"
+            xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M10 2a8 8 0 1 0 0 16 8 8 0 0 0 0-16Z" />
+            <path fill-rule="evenodd"
+              d="M21.707 21.707a1 1 0 0 1-1.414 0l-3.5-3.5a1 1 0 0 1 1.414-1.414l3.5 3.5a1 1 0 0 1 0 1.414Z"
+              clip-rule="evenodd" />
+          </svg></i>
+        <i class="icon-location"><svg class="w-[35px] h-[35px] text-gray-800 dark:text-white" aria-hidden="true"
+            xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor" viewBox="0 0 24 24">
+            <path fill-rule="evenodd"
+              d="M11.906 1.994a8.002 8.002 0 0 1 8.09 8.421 7.996 7.996 0 0 1-1.297 3.957.996.996 0 0 1-.133.204l-.108.129c-.178.243-.37.477-.573.699l-5.112 6.224a1 1 0 0 1-1.545 0L5.982 15.26l-.002-.002a18.146 18.146 0 0 1-.309-.38l-.133-.163a.999.999 0 0 1-.13-.202 7.995 7.995 0 0 1 6.498-12.518ZM15 9.997a3 3 0 1 1-5.999 0 3 3 0 0 1 5.999 0Z"
+              clip-rule="evenodd" />
+          </svg></i>
+        <i class="icon-profile"><svg class="w-[35px] h-[35px] text-gray-800 dark:text-white" aria-hidden="true"
+            xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor" viewBox="0 0 24 24">
+            <path fill-rule="evenodd"
+              d="M12 4a4 4 0 1 0 0 8 4 4 0 0 0 0-8Zm-2 9a4 4 0 0 0-4 4v1a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2v-1a4 4 0 0 0-4-4h-4Z"
+              clip-rule="evenodd" />
+          </svg></i>
+        <i class="icon-cart"><svg class="w-[35px] h-[35px] text-gray-800 dark:text-white" aria-hidden="true"
+            xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor" viewBox="0 0 24 24">
+            <path fill-rule="evenodd"
+              d="M4 4a1 1 0 0 1 1-1h1.5a1 1 0 0 1 .979.796L7.939 6H19a1 1 0 0 1 .979 1.204l-1.25 6a1 1 0 0 1-.979.796H9.605l.208 1H17a3 3 0 1 1-2.83 2h-2.34a3 3 0 1 1-4.009-1.76L5.686 5H5a1 1 0 0 1-1-1Z"
+              clip-rule="evenodd" />
+          </svg></i>
+        <i class="icon-burger"><svg class="w-[35px] h-[35px] text-gray-800 dark:text-white" aria-hidden="true"
+            xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="none" viewBox="0 0 24 24">
+            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M8 6h8M6 10h12M8 14h8M6 18h12" />
+          </svg>
+        </i>
+      </div>
     </nav>
   </header>
 
   <main>
-    <section></section>
+    <!-- Hero -->
+    <section class="hero">
+      <!-- Glide JS -->
+      <div class="glide">
+        <div class="glide__track" data-glide-el="track">
+          <ul class="glide__slides">
+            <li class="glide__slide"><img src="assets/img/Slide1.jpg" alt="Slide1"></li>
+            <li class="glide__slide"><img src="assets/img/Slide2.jpg" alt="Slide1"></li>
+            <li class="glide__slide"><img src="assets/img/Slide3.jpg" alt="Slide1"></li>
+          </ul>
+          <!-- Bullet -->
+          <div class="glide__bullets" data-glide-el="controls[nav]">
+            <button class="glide__bullet" data-glide-dir="=0"></button>
+            <button class="glide__bullet" data-glide-dir="=1"></button>
+            <button class="glide__bullet" data-glide-dir="=2"></button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Products -->
+    <section class="featured-products" data-aos="fade-up">
+      <h2>Featured Products</h2>
+      <div class="product">
+        <a href="product1.jpg" data-lightbox="products" data-title="Product 1"><img src="assets/img/Product1.jpg" alt="Product 1"></a>
+        <p>Pulaski</p>
+      </div>
+      <div class="product">
+        <a href="product2.jpg" data-lightbox="products" data-title="Product 2"><img src="assets/img/Product2.jpg" alt="Product 2"></a>
+        <p>Artemeist</p>
+      </div>
+      <div class="product">
+        <a href="product3.jpg" data-lightbox="products" data-title="Product 3"><img src="assets/img/Product3.jpg" alt="Product 3"></a>
+        <p>Keiko</p>
+      </div>
+    </section>
+    <!-- Map -->
+    <section class="maps">
+      <h2>Our Locations</h2>
+      <input type="text" id="address-input" placeholder="Enter your address">
+      <div id="map"></div>
+    </section>
   </main>
 
   <footer>
-    <p>&copy; 2024 Furniture Store</p>
+    <div class="topFooter">
+      <section class="leftFooter">
+        <div class="footer-nav">
+          <ul>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#contact">Contact Us</a></li>
+            <li><a href="#help">FAQs</a></li>
+          </ul>
+        </div>
+        <div class="social-media">
+          <a href="#"><i class="icon-facebook"><svg class="w-[35px] h-[35px] text-gray-800 dark:text-white"
+                aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
+                viewBox="0 0 24 24">
+                <path fill-rule="evenodd"
+                  d="M13.135 6H15V3h-1.865a4.147 4.147 0 0 0-4.142 4.142V9H7v3h2v9.938h3V12h2.021l.592-3H12V6.591A.6.6 0 0 1 12.592 6h.543Z"
+                  clip-rule="evenodd" />
+              </svg></i></a>
+          <a href="#"><i class="icon-x"><svg class="w-[35px] h-[35px] text-gray-800 dark:text-white" aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+                <path
+                  d="M13.795 10.533 20.68 2h-3.073l-5.255 6.517L7.69 2H1l7.806 10.91L1.47 22h3.074l5.705-7.07L15.31 22H22l-8.205-11.467Zm-2.38 2.95L9.97 11.464 4.36 3.627h2.31l4.528 6.317 1.443 2.02 6.018 8.409h-2.31l-4.934-6.89Z" />
+              </svg></i></a>
+          <a href="#"><i class="icon-instagram"><svg class="w-[35px] h-[35px] text-gray-800 dark:text-white"
+                aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none"
+                viewBox="0 0 24 24">
+                <path fill="currentColor" fill-rule="evenodd"
+                  d="M3 8a5 5 0 0 1 5-5h8a5 5 0 0 1 5 5v8a5 5 0 0 1-5 5H8a5 5 0 0 1-5-5V8Zm5-3a3 3 0 0 0-3 3v8a3 3 0 0 0 3 3h8a3 3 0 0 0 3-3V8a3 3 0 0 0-3-3H8Zm7.597 2.214a1 1 0 0 1 1-1h.01a1 1 0 1 1 0 2h-.01a1 1 0 0 1-1-1ZM12 9a3 3 0 1 0 0 6 3 3 0 0 0 0-6Zm-5 3a5 5 0 1 1 10 0 5 5 0 0 1-10 0Z"
+                  clip-rule="evenodd" />
+              </svg></i></a>
+        </div>
+      </section>
+      <section class="rightFooter">
+        <div class="location-hours">
+          <h3>Location</h3>
+          <p>333 Matheson Blvd W, Toronto, ON</p>
+          <h3>Hours</h3>
+          <p>Monday - Friday: 9am - 6pm</p>
+          <p>Saturday - Sunday: 10am - 5pm</p>
+        </div>
+      </section>
+    </div>
+    <div class="subscription">
+      <input type="email" placeholder="Subscribe to our newsletter">
+      <button>Subscribe</button>
+    </div>
+    <div class="copyright">
+      <p>&copy; 2024 Haute Furniture</p>
+    </div>
   </footer>
 
   <!-- JAVASCRIPTS -->
+  <script src="https://cdn.jsdelivr.net/npm/@glidejs/glide"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
   <script src="assets/js/main.js"></script>
 </body>
+
 </html>
