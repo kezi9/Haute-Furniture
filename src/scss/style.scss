@@ -3,6 +3,10 @@ $secondary-color: #f5f5f5;
 $head-font: "Playwrite CU", cursive;
 $body-font: "Josefin Sans", sans-serif;
 
+* {
+  box-sizing: border-box;
+}
+
 body {
   font-family: $body-font;
 }
@@ -130,7 +134,7 @@ footer {
     .footer-nav {
       text-align: center;
       align-content: center;
-      
+
       ul {
         list-style: none;
         display: flex;
@@ -222,6 +226,21 @@ footer {
         display: block;
       }
 
+    }
+  }
+
+  main {
+    .featured-products .product {
+      width: 100%;
+    }
+  }
+
+  footer {
+    .topFooter {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      font-size: smaller;
     }
   }
 }

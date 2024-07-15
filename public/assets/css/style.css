@@ -1,3 +1,7 @@
+* {
+  box-sizing: border-box;
+}
+
 body {
   font-family: "Josefin Sans", sans-serif;
 }
@@ -175,6 +179,15 @@ footer .copyright {
   }
   header nav .icons .icon-burger {
     display: block;
+  }
+  main .featured-products .product {
+    width: 100%;
+  }
+  footer .topFooter {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: smaller;
   }
 }
 
