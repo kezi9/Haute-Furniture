@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', function () {
   };
   new Glide('.glide', config).mount();
 
-  // Initialize Lightbox
+  // Lightbox
   if (typeof lightbox !== 'undefined') {
     lightbox.option({
       'resizeDuration': 200,
