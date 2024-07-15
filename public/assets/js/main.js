@@ -1,4 +1,11 @@
 document.addEventListener('DOMContentLoaded', function () {
+  const burger = document.querySelector('.icon-burger');
+  const navLinks = document.querySelector('.nav-links');
+
+  burger.addEventListener('click', function() {
+    navLinks.classList.toggle('active');
+  });
+  
   // Glide JS
   const config = {
     type: 'carousel',
@@ -11,7 +18,7 @@ document.addEventListener('DOMContentLoaded', function () {
   };
   new Glide('.glide', config).mount();
 
-  // Initialize Lightbox
+  // Lightbox
   if (typeof lightbox !== 'undefined') {
     lightbox.option({
       'resizeDuration': 200,
