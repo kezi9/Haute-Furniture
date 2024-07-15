@@ -11,16 +11,27 @@ document.addEventListener('DOMContentLoaded', function () {
   };
   new Glide('.glide', config).mount();
 
+  // Initialize Lightbox
+  if (typeof lightbox !== 'undefined') {
+    lightbox.option({
+      'resizeDuration': 200,
+      'wrapAround': true
+    });
+  } else {
+    console.error('Lightbox is not defined.');
+  }
+
   // AOS
   AOS.init();
 
-  // Algolia Places
-  const placesAutocomplete = places({});
-
   // Maps
-  // var map = L.map('map').setView([0, 0], 1);
-  // L.tileLayer('https://api.maptiler.com/maps/streets-v2/{z}/{x}/{y}.png?key=Rwa4uTaB8wINcglPbCNY', {
-  //   attribution: '<a href="https://www.maptiler.com/copyright/" target="_blank">&copy; MapTiler</a> <a href="https://www.openstreetmap.org/copyright" target="_blank">&copy; OpenStreetMap contributors</a>',
-  // }).addTo(map);
+  var map = L.map('map').setView([43.6566, -79.3796], 13);
+
+  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+  }).addTo(map);
+
+  var marker = L.marker([43.6566, -79.3796]).addTo(map);
+
 
 });
